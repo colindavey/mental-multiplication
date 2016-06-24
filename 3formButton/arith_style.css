@@ -1,0 +1,55 @@
+#form {
+	position: absolute;
+}
+#workspace {
+	position: absolute;
+	top: 5em;
+}
+
+.digit {
+	font-family: courier;
+/* 	font-size: 1em; */
+	font-size: 32px;
+/* 	height: 1em; */
+/*     line-height: 50%; */
+    line-height: 0.5em;
+	width: 1em;
+	position: absolute;
+}
+
+.r1 {
+	top: 1em;
+}
+
+.r2 {
+	top: 2em;
+}
+
+.r3 {
+	top: 3em;
+}
+
+.c1 {
+	left: 6em;
+}
+
+.c2 {
+	left: 5em;
+}
+
+.c3 {
+	left: 4em;
+}
+
+.c4 {
+	left: 3em;
+}
+
+.c5 {
+	left: 2em;
+}
+
+.c6 {
+	left: 1em;
+}
+

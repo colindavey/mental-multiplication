@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- *** TITLE *** -->
+	<TITLE>Arith 1></TITLE>
+	<!-- this path is from client POV -->
+	<link rel="stylesheet" type="text/css" href="arith_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="myscripts.js"></script>
+</head>
+<body>
+	<div id="form">
+		<form>
+			First multiplicand:<br>
+			<input type="number" id="m1" name="m1" value="999" min="0" max="999" maxlength="3"><br>
+			Second multiplicand: <br>
+			<input type="number" id="m2" name="m2" value="999" min="0" max="999" maxlength="3"><br>
+			<input type="button" value="Start" onclick="startMult()">
+			<input type="button" id="decrButton" value="<" onclick="decrState()">
+			<span id="stateNum">0</span>
+			<input type="button" id="incrButton" value=">" onclick="incrState()">
+		</form>
+	</div>
+	<div id="workspace">
+		<p id="m1" class="digit c0 r0">1</p>
+		<p id="m1" class="digit c1 r0">2</p>
+		<p id="m1" class="digit c2 r0">3</p>
+		<p id="m2" class="digit c0 r1">4</p>
+		<p id="m2" class="digit c1 r1">5</p>
+		<p id="m2" class="digit c2 r1">6</p>
+		<p id="a" class="digit c0 r2">7</p>
+		<p id="a" class="digit c1 r2">8</p>
+		<p id="a" class="digit c2 r2">9</p>
+		<p id="a" class="digit c3 r2">A</p>
+		<p id="a" class="digit c4 r2">B</p>
+		<p id="a" class="digit c5 r2">C</p>
+	</div>
+	<div id="scratch">
+		<p id="buff" class="digit c0 r0">1</p>
+		<p id="buff" class="digit c1 r0">2</p>
+		<p id="buff" class="digit c2 r0">3</p>
+		<p id="mult" class="digit c0 r1">4</p>
+		<p id="mult" class="digit c1 r1">5</p>
+		<p id="mult" class="digit c2 r1">6</p>
+		<p id="sum" class="digit c0 r2">7</p>
+		<p id="sum" class="digit c1 r2">8</p>
+		<p id="sum" class="digit c2 r2">9</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.oneDigitField {
+	width: 2em;
+}
+
+.threeDigitField {
+	width: 3em;
+}
+
+#m2 {
+/* 
+	border-bottom: solid #000;
+	padding-bottom: 0.1em;
+ */
+}
+
+#form {
+	position: absolute;
+}
+
+#form.p {
+    line-height: 0.5em;
+}
+
+#workspace {
+	position: absolute;
+	top: 2em;
+}
+
+#scratch {
+	position: absolute;
+	top: 2em;
+	left: 10em;
+}
+
+#explain {
+	position: absolute;
+	top: 11em;
+}
+
+#readme {
+	position: absolute;
+/* 	top: 16em; */
+	top: 0em;
+	left: 29em;
+	border: solid;
+/* 	margin-right: 30em; */
+	width: 25em;
+	padding-left: 1em;
+}
+
+.digit {
+	font-family: courier;
+	font-size: 32px;
+    line-height: 0.5em;
+	width: 1em;
+	position: absolute;
+}
+
+.arithLine {
+	height: .08em;
+	background: black;
+	position: absolute;
+/* 
+ 	width: 2.5em;
+	top: 2.7em;
+ */
+/* 	left: 4em; */
+}
+
+.r0 {
+	top: 1em;
+}
+
+.r1 {
+	top: 2em;
+}
+
+.r2 {
+	top: 3em;
+}
+
+.c0 {
+	left: 6em;
+}
+
+.c1 {
+	left: 5em;
+}
+
+.c2 {
+	left: 4em;
+}
+
+.c3 {
+	left: 3em;
+}
+
+.c4 {
+	left: 2em;
+}
+
+.c5 {
+	left: 1em;
+}
+

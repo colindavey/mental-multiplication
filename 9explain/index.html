@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- *** TITLE *** -->
+	<TITLE>Mental Multiplication</TITLE>
+	<!-- this path is from client POV -->
+	<link rel="stylesheet" type="text/css" href="arith_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="myscripts.js"></script>
+</head>
+<body>
+	<div id="form">
+		<form>
+			M1 len:
+			<input type="number" class="oneDigitField" id="m1len" value="3" min="1" max="3" maxlength="1">
+			M2 len:
+			<input type="number" class="oneDigitField" id="m2len" value="3" min="1" max="3" maxlength="1">
+			Max digit:
+			<input type="number" class="oneDigitField" id="maxDig" value="9" min="1" max="9" maxlength="1">
+			<input type="button" value="Randomize" onclick="setupMult()">
+			<br>
+
+			M1:
+			<input type="number" class="threeDigitField" id="m1in" value="999" min="0" max="999" maxlength="3">
+			M2:
+			<input type="number" class="threeDigitField" id="m2in" value="999" min="0" max="999" maxlength="3">
+			
+			<input type="button" value="Set" onclick="initMult()">
+			<input type="button" id="toLastButton" value="<<" onclick="toFirstState()">
+			<input type="button" id="decrButton" value="<" onclick="decrState()">
+			<span id="stateNum">0</span>
+			<input type="button" id="incrButton" value=">" onclick="incrState()">
+			<input type="button" id="toFirstButton" value=">>" onclick="toLastState()"><br>
+			
+			<input type = "checkbox" id ="chkInput" onclick="chkInputBrowser()">Input
+			<input type = "checkbox" id ="chkPwd" onclick="reRenderState()">Pwd mode
+			<input type = "checkbox" id ="chkExplain" onclick="reRenderState()" checked>Explain
+		</form>
+	</div>
+	<div id="workspace">
+		<p id="m1" class="digit c0 r0">1</p>
+		<p id="m1" class="digit c1 r0">2</p>
+		<p id="m1" class="digit c2 r0">3</p>
+		<p id="m2" class="digit c0 r1">4</p>
+		<p id="m2" class="digit c1 r1">5</p>
+		<p id="m2" class="digit c2 r1">6</p>
+
+		<p id="multsym" class="digit c3 r1">x</p>
+		<p id="workspaceLine" class="digit arithLine c2" style="width: 2.5em;top: 2.7em;"></p>
+
+		<p id="a" class="digit c0 r2">7</p>
+		<p id="a" class="digit c1 r2">8</p>
+		<p id="a" class="digit c2 r2">9</p>
+		<p id="a" class="digit c3 r2">A</p>
+		<p id="a" class="digit c4 r2">B</p>
+		<p id="a" class="digit c5 r2">C</p>
+	</div>
+	<div id="scratch">
+		<p id="buff" class="digit c0 r0">1</p>
+		<p id="buff" class="digit c1 r0">2</p>
+		<p id="buff" class="digit c2 r0">3</p>
+		<p id="mult" class="digit c0 r1">4</p>
+		<p id="mult" class="digit c1 r1">5</p>
+		<p id="mult" class="digit c2 r1">6</p>
+		<p id="sum" class="digit c0 r2">7</p>
+		<p id="sum" class="digit c1 r2">8</p>
+		<p id="sum" class="digit c2 r2">9</p>
+		
+		<p id="addsym" class="digit c3 r1">+</p>
+		<p id="scratchLine" class="digit arithLine c2" style="width: 2.5em;top: 2.7em;"></p>
+
+	</div>
+	<div id="explain">
+		<h2 id="e1">Explain 1</h2>
+		<h3 id="e2">Explain 2</h3>
+		<h3 id="e3">Explain 3</h3>
+	</div>
+	<div id="readme">
+		<H3>
+		READ ME
+		</H3>
+		<p>
+		This app teaches you to do mental multiplication. The left area shows you the problem and the answer as it develops. The right area shows the steps that you want to learn to do in your head.
+		</p> 
+
+		<p>
+		To learn: 
+		</p> 
+
+		<ol>
+		<li>
+		Go through some problems with the "Explain" checkbox checked to learn the method. 
+		</li>
+
+		<li>
+		Then check the "Input" checkbox to start solving the problems yourself. 
+		</li>
+
+		<li>
+		Then start practicing solving the problems mentally by working with the "Pwd mode" checkbox checked. 
+		</li>
+		</ol>
+
+		<p>
+		You can control the difficulty of the problem by decreasing the number of digits in the multiplicands and/or decreasing the maximum allowed digit. 
+		</p>
+
+		<p>
+		To setup a problem either: 
+		</p>
+
+		<ul>
+		<li>
+		Type the multiplicands into M1 and M2 and press "Set", or
+		</li>
+
+		<li>
+		Press "Randomize"
+		</li>
+		</ul>
+
+		<p>
+		In the case of Randomize, you can control the number of digits in each multiplicand, and control the difficulty of the problem by picking the maximum digit allowed in the multiplicands. 
+		</p>
+
+		<p>
+		Go through the steps of solving the problem by pressing ">". 
+		</p>
+
+		<p>
+		To solve the problem yourself, check "Input". 
+		</p>
+
+		<p>
+		To solve the problem mentally yourself, check "Input" and "Pwd mode". 
+		</p>
+
+		<p>
+		You can toggle the explanations with the "Explain" checkbox. 
+		</p>
+		
+		<p style="color: red;">
+		It has been tested on this limited set of browsers: Mac computers with Firefox 46, Chrome 51, Safari 7.05, Safari 6.2.8, and on iPhone iOS 5.1 Safari. Please report bugs, especially involving different browsers, to himself [at] colindavey.com. Thanks!
+		</p>
+	</div>
+</body>
+</html>
